@@ -118,7 +118,7 @@ class Occlusion_Generator:
         print(self.args["outputImgDir"])
         
         cv2.imwrite(os.path.join(self.args["outputImgDir"], f"{img_name}.jpg"),image)
-        cv2.imwrite(os.path.join(self.args["outputMaskDir"], f"{img_name}.png"),mask/255)
+        cv2.imwrite(os.path.join(self.args["outputMaskDir"], f"{img_name}.png"),mask)
         if self.args["maskForOcclusion"]:
             cv2.imwrite(os.path.join(self.args["occlusionMaskDir"], f"{img_name}.png"),occlusion_mask)
 
